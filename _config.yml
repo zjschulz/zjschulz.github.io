@@ -1,11 +1,11 @@
 # Site settings
 author: Zachary Schulz
-title: 
+title: Knowing Your Level of Skill
 header-img: img/home-bg.png
 email: zjschulz@gmail.com
 copyright_name: Zachary Schulz
 description: > # this means to ignore newlines until "baseurl:"
-  
+  My First Foray Into Coding
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  zjschulz
