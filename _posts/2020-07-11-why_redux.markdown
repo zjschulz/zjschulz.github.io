@@ -1,0 +1,19 @@
+---
+layout: post
+title:      "Why Redux???"
+date:       2020-07-11 18:45:08 +0000
+permalink:  why_redux
+---
+
+
+"What's the point of refactoring my perfectly functioning application just to include Redux???" This question plagued me during my final project for flatiron. The project requirements was to build an application using React and Redux as my frontend javascript framework with a rails api. I decided to build my frontend in React first, then refactor later into Redux. We did this in my weekly study group and it seemed like a solid way to build a Redux frontend. Boy, was I mistaken!
+
+Don't get me wrong, it wasn't difficult to refactor once I started. The difficult part was accepting the fact that I even needed to refactor into Redux. How was it better than just using React? What could it possibly offer me? The answer: Ease of access to my states.
+
+Before refactoring, I had to pass my states down through the parent components to the child components and so on. In Redux, with the use of mapStateToProps and mapDispatchToProps, I was able to access my state from any component I wanted and alter the state from any component I wanted. This meant that instead of using a prop passed down through my compenents, I could just pluck the prop from my store and use it at will. 
+
+For instance, my application has a user session authentication portion. Ideally, I want my entire app to be aware of the user that is logged in and be able to grant that user specific priveleges since they are. With Redux, I am able to have that "user" prop, populated upon successful login, to be in my store for when I need it. So, when I want a team to be created and belong to that user, I can use that user prop instead of a prop passed down through multiple components.
+
+Redux also allowed me to use the history prop available in react wherever I wanted. Having the history of the entire app stored in the store and passing in the this.props.history to my action functions allowed me to use that history during my then statement in my fetch requests. It made my program work more asynchronously.
+
+"What's the point of refactoring my perfectly functioning application just to include Redux???" The answer: So I can have all the coding tools available to me in one place. Vanilla React is like borrowing a lawnmower from your parent's house. Yeah, you can use it whener you want, but it comes with a side of guilt and "When are you going to get married?" I'd much rather go the mentally safe React-Redux route and have that lawnmower stored in my own garage so I can use it whenever I want.
